@@ -19,7 +19,7 @@
 - 使用 ID
 
   ```bash
-  netease-dl 25159744
+  wyy 25159744
   ```
 
   ```
@@ -30,7 +30,7 @@
 - 使用分享链接
 
   ```bash
-  netease-dl "https://music.xxx.com/song?id=25159744"
+  wyy "https://music.xxx.com/song?id=25159744"
   ```
 
   ```
@@ -41,7 +41,7 @@
 - 使用剪贴板
 
   ```bash
-  netease-dl
+  wyy
   ```
 
   ```
@@ -52,7 +52,7 @@
 - 指定下载目录 (`.`表示当前目录)
 
   ```bash
-  netease-dl -o .
+  wyy -o .
   ```
 
   ```
@@ -63,7 +63,7 @@
 - 当下载目录同名文件存在时，覆盖现有文件
 
   ```bash
-  netease-dl -r
+  wyy -r
   ```
 
   ```
