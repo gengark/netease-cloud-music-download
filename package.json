@@ -1,5 +1,5 @@
 {
-  "name": "netease-cloud-music-download",
+  "name": "netease-music-download",
   "description": "A simple Node.js CLI library that helps you to download mp3 file for NetEase Cloud Music source",
   "version": "0.1.0",
   "type": "module",
