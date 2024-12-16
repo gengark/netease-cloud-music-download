@@ -11,8 +11,12 @@
 2. 打开任意终端（cmd/bash/powershell/...）安装当前包。
 
     ```bash
-    npm i -g netease-cloud-music-download
+    git clone https://github.com/gengark/netease-cloud-music-download.git && npm install && npm run build && npm link
     ```
+
+3. 遇到问题无法解决？
+
+    > 点击 [Issues][issues-url] 填写表单，描述问题和截图来获取帮助。
 
 ## ⚙️ 使用
 
