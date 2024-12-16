@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "outDir": "./dist",
+        "rootDir": ".",
+        "typeRoots": ["./node_modules/@types", "types"],
+        "strict": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "experimentalDecorators": true
+    },
+    "ts-node": {
+        "experimentalSpecifierResolution": "node",
+        "esm": true,
+        "transpileOnly": true
+    },
+    "include": ["src", "bin", "types"],
+    "exclude": ["node_modules", "dist", "src"]
+}

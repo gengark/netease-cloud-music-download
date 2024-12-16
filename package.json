@@ -1,0 +1,61 @@
+{
+  "name": "netease-cloud-music-download",
+  "description": "A simple Node.js CLI library that helps you to download mp3 file for NetEase Cloud Music source",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "types": "./dist/cli.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "netease-dl": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "ts-node bin/cli.ts",
+    "prepare": "husky",
+    "lint": "biome check src bin --write",
+    "lint-staged": "lint-staged",
+    "build": "tsup",
+    "watch": "tsup --watch"
+  },
+  "author": {
+    "name": "gengarr",
+    "email": "97z4moon@gmail.com",
+    "url": "https://github.com/gengark"
+  },
+  "homepage": "https://github.com/gengark/netease-cloud-music-download#readme",
+  "repository": "git@github.com:gengark/netease-cloud-music-download.git",
+  "bugs": "https://github.com/gengark/netease-cloud-music-download/issue",
+  "keywords": [
+    "netease",
+    "music",
+    "mp3",
+    "download",
+    "网易云音乐"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/cli-progress": "^3.11.6",
+    "@types/node": "^22.10.2",
+    "@types/update-notifier": "^6.0.8",
+    "@types/yargs": "^17.0.33",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "clipboardy": "^4.0.0",
+    "open": "^10.1.0",
+    "ora": "^8.1.1",
+    "update-notifier": "^7.3.1",
+    "yargs": "^17.7.2"
+  }
+}
