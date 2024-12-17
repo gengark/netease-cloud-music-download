@@ -24,7 +24,7 @@ const yellow = palette(33);
 
 main(
     yargs(hideBin(process.argv))
-        .scriptName('netease-dl')
+        .scriptName('wyy')
         .usage('$0 [options] <url>')
         .options('output', {
             alias: 'o',
@@ -36,12 +36,14 @@ main(
             type: 'boolean',
             desc: '覆盖现有的同名文件 (若存在)',
         })
-        .example(yellow('netease-dl'), '使用剪贴板中的单曲ID / 链接')
-        .example(yellow('netease-dl 25159744'), '指定单曲ID')
-        .example(yellow('netease-dl "https://music.163.com/song?id=25159744"'), '指定单曲链接')
+        .example(yellow('wyy'), '使用剪贴板中的单曲ID / 链接')
+        .example(yellow('wyy 25159744'), '指定单曲ID')
+        .example(yellow('wyy "https://music.163.com/song?id=25159744"'), '指定单曲链接')
         .example(grey('-------'), '')
-        .example(yellow('netease-dl'), '下载到当前用户默认的 Downloads 目录')
-        .example(yellow('netease-dl -o .'), '下载到当前目录中')
+        .example(yellow('wyy'), '下载到当前用户默认的 Downloads 目录')
+        .example(yellow('wyy -o .'), '下载到当前目录中')
+        .example(grey('-------'), '')
+        .example(yellow('wyy -r'), '同名文件存在时，覆盖现有文件')
         .alias({
             v: 'version',
             h: 'help',

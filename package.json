@@ -1,5 +1,5 @@
 {
-  "name": "wyy-music-download",
+  "name": "netease-cloud-music-download",
   "description": "A simple Node.js CLI library that helps you to download mp3 file for NetEase Music source",
   "version": "0.1.0",
   "type": "module",
@@ -9,7 +9,8 @@
     "dist"
   ],
   "bin": {
-    "wyy": "./dist/cli.js"
+    "wyy": "./dist/cli.js",
+    "netease-cloud-music-download": "./dist/cli.js"
   },
   "scripts": {
     "dev": "ts-node bin/cli.ts",
@@ -17,7 +18,8 @@
     "lint": "biome check src bin --write",
     "lint-staged": "lint-staged",
     "build": "tsup",
-    "watch": "tsup --watch"
+    "watch": "tsup --watch",
+    "init": "npm install && npm run build && npm link"
   },
   "author": {
     "name": "gengarr",

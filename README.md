@@ -11,7 +11,7 @@
 2. 打开任意终端（cmd/bash/powershell/...）安装当前包。
 
     ```bash
-    git clone https://github.com/gengark/netease-cloud-music-download.git && npm install && npm run build && npm link
+    git clone https://github.com/gengark/netease-cloud-music-download.git && cd netease-cloud-music-download && npm run init
     ```
 
 3. 遇到问题无法解决？
