@@ -12,7 +12,7 @@ const yellow = palette(33);
 
 yargs(hideBin(process.argv))
     .scriptName('wyy')
-    .usage('$0 [options] <url>')
+    .usage('$0 [options] <query>')
     .options('output', {
         alias: 'o',
         type: 'string',
