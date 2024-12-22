@@ -12,6 +12,8 @@ async function downloadFile(url: string, output: string, spinner: Ora) {
                 const redirectUrl = response.headers.location;
                 if (!redirectUrl) {
                     spinner.fail('所请求的资源位置已更改，无法正确重定向');
+                } else if (redirectUrl.split('/').pop() === '404') {
+                    spinner.fail('该单曲为会员单曲/付费单曲/没有版权');
                 } else {
                     downloadFile(redirectUrl, output, spinner);
                 }
@@ -54,8 +56,8 @@ async function downloadFile(url: string, output: string, spinner: Ora) {
         }).on('error', (err) => {
             spinner.fail(`请求错误: ${err}`);
         });
-    } catch {
-        spinner.fail('该单曲为会员单曲/付费单曲/没有版权');
+    } catch (err) {
+        spinner.fail(`无法获取到资源: ${err}`);
     }
 }
 

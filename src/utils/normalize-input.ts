@@ -1,5 +1,5 @@
-import { HTTPS_HOST_PATH } from './constants';
-import getClipboardContent from './get-clipboard-content';
+import { HTTPS_HOST_PATH } from '../constants';
+import getClipboardContent from './_internal/get-clipboard-content';
 
 async function normalizeInput(
     input?: string,
