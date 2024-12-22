@@ -41,7 +41,7 @@ async function main({ _: input, output, rewrite, browse }: Options = {}) {
         }
 
         confirm && (await open(sourceUrl));
-        spinner.succeed('已在默认浏览器中打开，请在切换到浏览器窗口中查看');
+        spinner.succeed('已在默认浏览器中打开，请切换到浏览器窗口中查看');
     } else {
         const info = await getInfo(id);
 
