@@ -11,7 +11,7 @@
 2. 打开任意终端（cmd/bash/powershell/...）安装当前包。
 
     ```bash
-    git clone https://github.com/gengark/netease-cloud-music-download.git && cd netease-cloud-music-download && npm run init
+    git clone https://github.com/gengark/netease-cloud-music-download.git && cd netease-cloud-music-download && npm run install && npm link
     ```
 
 3. 遇到问题无法解决？
@@ -73,6 +73,18 @@
   ```
   下载进度 [========================================] 100% | 433467/433467 KB
   ✔ 下载完成: C:\Users\User\Downloads\Hello Makka Pakka! - Andrew Davenport.mp3
+  ```
+
+- 使用默认浏览器访问，而非下载文件
+
+  ```bash
+  wyy -b
+  ```
+
+  ```
+  ✔ 资源地址: http://music.163.com/song//media/outer/url?id=25159744
+  ✔ 浏览器访问资源会自动播放, 请注意使用场合, 确认使用浏览器打开吗? (按回车键确认) Yes
+  ✔ 已在默认浏览器中打开，请在切换到浏览器窗口中查看
   ```
 
 ## ❓ Q & A

@@ -55,7 +55,7 @@ async function downloadFile(url: string, output: string, spinner: Ora) {
             spinner.fail(`请求错误: ${err}`);
         });
     } catch {
-        spinner.fail('该单曲为会员单曲/付费单曲/没有版权')
+        spinner.fail('该单曲为会员单曲/付费单曲/没有版权');
     }
 }
 

@@ -7,6 +7,7 @@ interface SongInfo {
     id: number;
     name: string;
     artists: ArtistInfo[];
+    transName?: string;
 }
 
 const normalizeName = (name?: string) =>
@@ -27,6 +28,8 @@ async function getInfo(id: string) {
         const data: { songs: SongInfo[] } | undefined = await response.json();
         const songData = data?.songs?.[0];
         result.song = normalizeName(songData?.name) ?? '未知单曲';
+        if (songData?.transName)
+            result.song += ` (${normalizeName(songData.transName)})`;
         result.artists = normalizeName(
             (songData?.artists ?? [{ name: '未知作者' }])
                 .map((artist) => artist.name)
