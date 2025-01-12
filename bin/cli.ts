@@ -16,7 +16,7 @@ yargs(hideBin(process.argv))
     .options('output', {
         alias: 'o',
         type: 'string',
-        desc: '输出路径 (目录/文件名.mp3)',
+        desc: '输出路径 (目录)',
     })
     .options('rewrite', {
         alias: 'r',
@@ -29,22 +29,22 @@ yargs(hideBin(process.argv))
         desc: '使用默认浏览器访问',
     })
     .command(
-        ['search [query]', '$0'],
+        ['search [query..]', '$0'],
         '查询单曲并下载',
         (yargs: Argv<SearchCommandOptions>) => {
             return yargs
                 .example(
-                    yellow('wyy "Makka Pakka"'),
+                    yellow('wyy Makka Pakka'),
                     '查询玛卡巴卡, 并下载选中单曲',
                 )
-                .example(yellow('wyy "Makka Pakka" -o .'), '下载到当前目录中')
+                .example(yellow('wyy Makka Pakka -o .'), '下载到当前目录中')
                 .example(grey('-------'), '')
                 .example(
-                    yellow('wyy "Makka Pakka" -r'),
+                    yellow('wyy Makka Pakka -r'),
                     '同名文件存在时，覆盖现有文件',
                 )
                 .example(
-                    yellow('wyy "Makka Pakka" -b'),
+                    yellow('wyy Makka Pakka -b'),
                     '使用默认浏览器访问，而非下载文件',
                 );
         },

@@ -25,13 +25,13 @@
 **查询 `Makka Pakka` 歌曲，选中相应歌曲下载**
 
 ```bash
-wyy "Makka Pakka"
+wyy Makka Pakka
 ```
 
 **使用默认浏览器访问资源**
 
 ```bash
-wyy "Makka Pakka" -b
+wyy Makka Pakka -b
 ```
 
 **通过剪贴板中的分享链接下载**
@@ -89,7 +89,7 @@ wyy [参数] <查询信息>
 - 查询单曲名、歌手、描述任意组合
 
   ```bash
-  wyy "猪猪侠主题曲 陈洁丽"
+  wyy 猪猪侠主题曲 陈洁丽
   ```
 
   ```
