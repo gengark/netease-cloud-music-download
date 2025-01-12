@@ -6,21 +6,22 @@ import { downloadFile, getDownloadDirectory, normalizeName } from '../utils';
 import type { CommandOptions } from './types';
 
 export interface SearchCommandOptions extends CommandOptions {
-    query?: string;
+    query?: string[];
 }
 
 async function searchCommand({
-    query,
+    query: queries,
     output,
     rewrite,
     browse,
 }: SearchCommandOptions) {
     const spinner = ora({ color: 'cyan' });
-    if (!query) {
+    if (!queries) {
         spinner.fail('请输入歌曲名称/作者名称');
         return;
     }
 
+    const query = queries.join(' ');
     const result = await selectSong(query);
     if (!result) return;
 
